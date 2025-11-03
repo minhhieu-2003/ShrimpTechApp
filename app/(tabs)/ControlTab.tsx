@@ -1,9 +1,4 @@
 // src/screens/ControlTab.tsx
-import { useFirebaseConfig } from '@/contexts/FirebaseConfigContext';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTheme } from '@/contexts/ThemeContext';
-import { useESP32Schedule } from '@/hooks/useESP32Schedule';
-import { useVoiceControl } from '@/hooks/useVoiceControl';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { onValue, ref, set } from 'firebase/database';
 import React, { useEffect, useRef, useState } from 'react';
@@ -18,6 +13,11 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import { useFirebaseConfig } from '../../contexts/FirebaseConfigContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useESP32Schedule } from '../../hooks/useESP32Schedule';
+import { useVoiceControl } from '../../hooks/useVoiceControl';
 
 interface RelayDevice {
   labelKey: string; // Translation key

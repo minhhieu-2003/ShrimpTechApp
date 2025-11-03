@@ -415,7 +415,7 @@ export default function SettingsTab() {
               <MaterialCommunityIcons 
                 name="theme-light-dark" 
                 size={24} 
-                color={themeMode === 'auto' ? colors.primary : colors.textSecondary} 
+                color={(themeMode as 'auto' | 'light' | 'dark') === 'auto' ? colors.primary : colors.textSecondary} 
               />
               <Text style={[
                 styles.languageOptionText,
